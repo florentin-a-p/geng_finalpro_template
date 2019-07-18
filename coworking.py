@@ -37,29 +37,43 @@ def hitung_luas_lantai_total(...):
     return luas_lantai_total
 
 def hitung_jumlah_keramik(...,...,...):
-    luas_keramik_solo = sisi_keramik**2 # meter persegi
-    jumlah_keramik = luas_lantai_total/luas_keramik_solo # jumlah
+    luas_keramik_solo = ... # meter persegi
+    jumlah_keramik = ... # jumlah
     return jumlah_keramik
 
 # hitung jumlah bata dari luas tembok total (4 sisi), dikurangi pintu dan jendela
 def hitung_luas_pintu(...,...):
-    luas_pintu = panjang_pintu * lebar_pintu # meter persegi
+    luas_pintu = ... # meter persegi
     return luas_pintu
 
 def hitung_luas_jendela(...,...):
-    luas_jendela = panjang_jendela * lebar_jendela # meter persegi
+    luas_jendela = ... # meter persegi
     return luas_jendela
 
 def hitung_luas_tembok_asli(...):
-    panjang_sisi_tembok = luas_lantai_total**(1/2) # meter
-    luas_tembok_total = panjang_sisi_tembok * tinggi_tembok # meter persegi
+    panjang_sisi_tembok = ... # meter
+    luas_tembok_total = ... # meter persegi
     luas_tembok_asli = luas_tembok_total - jumlah_pintu*luas_pintu - jumlah_jendela*luas_jendela # meter persegi
     return luas_tembok_asli
 
 def hitung_jumlah_bata(...,...,...):
-    luas_bata_solo = panjang_bata*lebar_bata # meter persegi
-    jumlah_bata = luas_tembok_asli/luas_bata_solo # jumlah
+    luas_bata_solo = ... # meter persegi
+    jumlah_bata = ... # jumlah
     return jumlah_bata
+
+# estimasi harga
+harga_bata_solo = ...
+harga_keramik_solo = ...
+profit = ...
+
+def hitung_harga_bangunan(...,...):
+    harga_bata_total = ...
+    harga_keramik_total = ...
+    return harga_bangunan
+
+def hitung_harga_jual(...,...):
+    harga_jual = ... # berapa yang harus kamu jual agar tidak rugi? agar mendapatkan keuntungan?
+    return harga_jual
 
 # run all the functions
 luas_lantai_total = hitung_luas_lantai_total(...)
@@ -68,9 +82,12 @@ luas_pintu = hitung_luas_pintu(...,...)
 luas_jendela = hitung_luas_jendela(...,...)
 luas_tembok_asli = hitung_luas_tembok_asli(...)
 jumlah_bata = hitung_jumlah_bata(...,...,...)
+harga_bangunan = hitung_harga_bangunantung_harga(...,...)
+harga_jual = hitung_harga_jual(...,...)
 
 print("===========================================================================================")
-print('Jumlah bata yang kamu butuhkan: '+str(jumlah_bata))
-print('Jumlah keramik yang kamu butuhkan: '+str(jumlah_keramik))
-                      
+print('Jumlah bata yang dibutuhkan: '+str(jumlah_bata))
+print('Jumlah keramik yang dibutuhkan: '+str(jumlah_keramik))
+print('Harga total yang harus dibayar: '+str(harga_jual))                      
+
 print("================================Thanks For Using COWORKING!================================")

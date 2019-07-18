@@ -19,7 +19,7 @@ no_hp = input(...)
 
 minta = True
 while (minta):
-    if ( (...) or (...) and (...) and (...) ):  # jika nomor HP valid
+    if ( ((...) or (...)) and ((...) and (...)) ):  # jika nomor HP valid
         minta = False # keluar dari loop dan pergi ke langkah selanjutnya
     else: # jika nomor HP tidak valid
         minta = True 
@@ -51,23 +51,17 @@ while (minta):
         no_hp = ... # tetap minta nomor KTP ke user
 
 # cek_provinsi
-def cek_provinsi(...,...):
-    for kode in daftar_kode_wilayah: # bandingkan semua kode wilayah dalam daftar dengan kode wilayah di KTP
-        if ... == ... : # jika menemukan kode wilayah yang cocok di daftar kode wilayah
-            provinsi = ...  # masukkan provinsi sesuai kode wilayah
-    return provinsi
+for kode in daftar_kode_wilayah: # bandingkan semua kode wilayah dalam daftar dengan kode wilayah di KTP
+    if ... == ... : # jika menemukan kode wilayah yang cocok di daftar kode wilayah
+        provinsi = ...  # masukkan provinsi sesuai kode wilayah
 
 # cek tanggal lahir
-def cek_tanggal_lahir(...,...): 
-    if jenis_kelamin == 'P': # jika jenis kelamin perempuan
-        tanggal_lahir = ... - 400000 # ambil kode tanggal lahir pada KTP
-        tanggal_lahir = str(tanggal_lahir) 
-    elif jenis_kelamin == 'L':  # jika jenis kelamin laki-laki
-        tanggal_lahir = ...
-    return tanggal_lahir
+if jenis_kelamin == 'P': # jika jenis kelamin perempuan
+    tanggal_lahir = ... - 400000 # ambil kode tanggal lahir pada KTP
+    tanggal_lahir = str(tanggal_lahir) 
+elif jenis_kelamin == 'L':  # jika jenis kelamin laki-laki
+    tanggal_lahir = ...
 
-provinsi = cek_provinsi(...,...)
-tanggal_lahir = cek_tanggal_lahir(...,...)
 
 print("Terima kasih atas registrasinya! Kamu lahir di "+provinsi+" dan pada tanggal "+tanggal_lahir+" ya?")
 print("================================Thanks For Using FINTECH!================================")
